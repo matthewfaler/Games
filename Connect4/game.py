@@ -3,32 +3,25 @@ import board
 class Game:
     def __init__(self):
         self.board = board.Board()
-        self.nextSpots = [5, 5, 5, 5, 5, 5, 5]
+
 
     def turn(self):
         inp = input("Choose which column to play (A-G): ")
         match inp:
             case 'A':
-                self.board.put(0, self.nextSpots[0])
-                self.nextSpots[0] -= 1
+                self.board.put(0)
             case 'B':
-                self.board.put(1, self.nextSpots[1])
-                self.nextSpots[1] -= 1
+                self.board.put(1)
             case 'C':
-                self.board.put(2, self.nextSpots[2])
-                self.nextSpots[2] -= 1
+                self.board.put(2)
             case 'D':
-                self.board.put(3, self.nextSpots[3])
-                self.nextSpots[3] -= 1
+                self.board.put(3)
             case 'E':
-                self.board.put(4, self.nextSpots[4])
-                self.nextSpots[4] -= 1
+                self.board.put(4)
             case 'F':
-                self.board.put(5, self.nextSpots[5])
-                self.nextSpots[5] -= 1
+                self.board.put(5)
             case 'G':
-                self.board.put(6, self.nextSpots[6])
-                self.nextSpots[6] -= 1
+                self.board.put(6)
             case _:
                 print("Please choose a valid option.")
 
