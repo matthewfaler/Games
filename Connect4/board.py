@@ -21,10 +21,12 @@ class Board:
             return False
         self.board[self.nextSpots[x]][x] = colors[self.player]
         if self.checkVictory(x, self.nextSpots[x]):
-            return True
+            return 2
+        if self.checkFull():
+            return 1
         self.toggleColor();
         self.nextSpots[x] -= 1
-        return False
+        return 0
 
     def checkVictory(self, x: int, y: int):
         hor, ver, diag, adiag = 1, 1, 1, 1

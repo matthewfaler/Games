@@ -13,12 +13,12 @@ class Game:
             print("Please choose a valid option.")
             return
 
-        won = self.board.put(colmap[inp])
-        if won:
+        status = self.board.put(colmap[inp])
+        if status == 2:
             self.board.out()
             print(f"Player {board.colors[self.board.player]} wins!")
             self.finished = True
-        elif self.board.checkFull():
+        elif status == 1:
             self.board.out()
             print("It's a draw!")
             self.finished = True
