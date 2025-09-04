@@ -37,3 +37,7 @@ class Board:
         print(f" {self.board[1][0]}|{self.board[1][1]}|{self.board[1][2]}")
         print("-------")
         print(f" {self.board[2][0]}|{self.board[2][1]}|{self.board[2][2]}")
+
+if __name__ == "__main__":
+    b = Board()
+    b.out()
