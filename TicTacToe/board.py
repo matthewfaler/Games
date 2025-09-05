@@ -7,7 +7,7 @@ class Board:
         self.board = numpy.full([3, 3], ' ', dtype='U1')
         self.player = 0
 
-    def turn(self, x, y):
+    def put(self, x, y):
         self.board[y, x] = x_or_o[self.player]
         self.togglePlayer()
         if self.checkVictory(): return 2
@@ -32,12 +32,12 @@ class Board:
         self.player = 1 - self.player
 
     def out(self):
-        print("   A   B   C")
-        print(f" A {self.board[0][0]} | {self.board[0][1]} | {self.board[0][2]}")
+        print("   1   2   3")
+        print(f" 1 {self.board[0][0]} | {self.board[0][1]} | {self.board[0][2]}")
         print("  -----------")
-        print(f" B {self.board[1][0]} | {self.board[1][1]} | {self.board[1][2]}")
+        print(f" 2 {self.board[1][0]} | {self.board[1][1]} | {self.board[1][2]}")
         print("  -----------")
-        print(f" C {self.board[2][0]} | {self.board[2][1]} | {self.board[2][2]}")
+        print(f" 3 {self.board[2][0]} | {self.board[2][1]} | {self.board[2][2]}")
 
 if __name__ == "__main__":
     b = Board()
