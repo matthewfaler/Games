@@ -32,11 +32,12 @@ class Board:
         self.player = 1 - self.player
 
     def out(self):
-        print(f" {self.board[0][0]}|{self.board[0][1]}|{self.board[0][2]}")
-        print("-------")
-        print(f" {self.board[1][0]}|{self.board[1][1]}|{self.board[1][2]}")
-        print("-------")
-        print(f" {self.board[2][0]}|{self.board[2][1]}|{self.board[2][2]}")
+        print("   A   B   C")
+        print(f" A {self.board[0][0]} | {self.board[0][1]} | {self.board[0][2]}")
+        print("  -----------")
+        print(f" B {self.board[1][0]} | {self.board[1][1]} | {self.board[1][2]}")
+        print("  -----------")
+        print(f" C {self.board[2][0]} | {self.board[2][1]} | {self.board[2][2]}")
 
 if __name__ == "__main__":
     b = Board()
